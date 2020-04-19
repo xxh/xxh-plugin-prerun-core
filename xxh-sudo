@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo env "PATH=$PATH" "XXH_HOME=$XXH_HOME" "PYTHONPATH=$PYTHONPATH" "PIP_TARGET=$PIP_TARGET" "$@"
