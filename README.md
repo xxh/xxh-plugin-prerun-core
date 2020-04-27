@@ -1,4 +1,4 @@
-This plugin adds `xxh-sudo` command to run `sudo` with current session environment: `PATH`, `XXH_HOME`, `PYTHONPATH`, `PIP_TARGET`.
+This plugin adds `xxh-sudo` command to run `sudo` with current session environment: `PATH`, `XXH_HOME`, Python and XDG.
 
 ## Install
 From xxh repo:
