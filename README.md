@@ -1,13 +1,15 @@
-This plugin adds `xxh-sudo` command to run `sudo` with current session environment: `PATH`, `XXH_HOME`, Python and XDG.
+The core plugin contains:
+* `xxh-sudo` command to run `sudo` with current session environment: `PATH`, `XXH_HOME`, Python and XDG.
+* `xxh-screen` command to run `screen` command with xxh session. 
 
 ## Install
 From xxh repo:
 ```
-xxh +I xxh-plugin-prerun-sudo
+xxh +I xxh-plugin-prerun-core
 ```
 From any repo:
 ```
-xxh +I xxh-plugin-prerun-sudo+git+https://github.com/xxh/xxh-plugin-prerun-sudo
+xxh +I xxh-plugin-prerun-core+git+https://github.com/xxh/xxh-plugin-prerun-core
 ```    
 Connect:
 ```
@@ -23,7 +25,7 @@ root
 ## Examples 
 ### Usage xxh sudo with xxh python to run http server with API
 ```bash
-xxh +RI xxh-plugin-prerun-sudo xxh-plugin-prerun-python
+xxh +RI xxh-plugin-prerun-core xxh-plugin-prerun-python
 xxh myhost +s zsh +if
 
 myhost> pip install fastapi uvicorn && mkdir api && cd api
