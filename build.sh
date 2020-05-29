@@ -16,7 +16,7 @@ done
 rm -rf $build_dir
 mkdir -p $build_dir
 
-for f in *prerun.sh xxh-sudo
+for f in *prerun.sh xxh-*
 do
     cp $CDIR/$f $build_dir/
 done
