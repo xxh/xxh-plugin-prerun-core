@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+screen "$@" $XXH_HOME/.xxh/shells/xxh-shell-$XXH_SHELL/build/entrypoint.sh
