@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+tmux new-session -s xxh-session $XXH_HOME/.xxh/shells/xxh-shell-$XXH_SHELL/build/entrypoint.sh
