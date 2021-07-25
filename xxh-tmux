@@ -2,7 +2,7 @@
  
 case $# in
         0)
-                # no arguments --> create new session but, make sure it has a unique name
+                # no arguments --> create new session, but make sure it has a unique name
                 latest_xxh_tmux_session=$(tmux ls | grep -oP "xxh_session_\K[0-9]+" | \
                         sort -n | tail -n1)
                 # this works also when $latest_xxh_tmux_session is empty
