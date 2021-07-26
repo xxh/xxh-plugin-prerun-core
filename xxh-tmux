@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+ 
+case $# in
+        0)
+                # no arguments --> create new session, but make sure it has a unique name
+                latest_xxh_tmux_session=$(tmux ls | grep -oP "xxh_session_\K[0-9]+" | \
+                        sort -n | tail -n1)
+                # this works also when $latest_xxh_tmux_session is empty
+                cntr="$(($latest_xxh_tmux_session + 1))"
+                args="new -s xxh_session_$cntr"
+                ;;
+        1)
+                # one argument --> assume this is the name for the new session
+                args="new -s $1" 
+                ;;
+        *)
+                # multiple args --> give user full control and pass all to tmux
+                args="$@"
+                ;;
+esac    
+ 
+tmux $args \
+        $XXH_HOME/.xxh/shells/xxh-shell-$XXH_SHELL/build/entrypoint.sh
