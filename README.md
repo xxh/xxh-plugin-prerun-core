@@ -1,6 +1,7 @@
 The core plugin contains:
 * `xxh-sudo` command to run `sudo` with current session environment: `PATH`, `XXH_HOME`, Python and XDG.
 * `xxh-screen` command to run `screen` command with xxh session. 
+* `xxh-tmux`
 
 ## Install
 From xxh repo:
